@@ -1,0 +1,44 @@
+.App {
+  max-width: 100vw;
+  min-height: 50vh;  /* Reduced from 80vh to 50vh */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card {
+  aspect-ratio: 2/3;  /* Changed from 3/4 to 2/3 for shorter height */
+  position: relative;
+  cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+  
+  .App {
+    padding: 10px;
+  }
+}
